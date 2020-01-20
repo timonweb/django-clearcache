@@ -1,0 +1,18 @@
+{% extends 'admin/index.html' %}
+
+{% block sidebar %}
+  {{ block.super }}
+  <div class="app-clear-cache module">
+    <table>
+      <caption>
+        <a href="/backdoor/users/" class="section" title="Clear cache">Clear cache</a>
+      </caption>
+      <tbody>
+      <tr class="model-user">
+        <th scope="row"><a href="{% url 'clearcache_admin' %}">Clear cache</a></th>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
