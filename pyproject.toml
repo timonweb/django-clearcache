@@ -1,19 +1,18 @@
 [tool.poetry]
 name = "django-clearcache"
-version = "1.0"
+version = "1.0.1"
 description = "Allows you to clear Django cache via admin UI or manage.py command"
 authors = ["Tim Kamanin <tim@timonweb.com>"]
 homepage = "https://timonweb.com"
 repository = "https://github.com/timonweb/django-clearcache"
-
+readme = "README.md"
 packages = [
     { include = "clearcache" }
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6"
-django = "^2.2"
-
+python = ">=3.6,<3.9"
+django = ">=2.2,<3.1"
 
 [tool.poetry.dev-dependencies]
 pytest-django = "^3.8.0"
