@@ -10,15 +10,21 @@ Allows you to clear Django cache via admin UI or manage.py command.
 
     `pip install django-clearcache`
 
-2. Add **clearcache** to INSTALLED_APPS:
+2. Add **clearcache** to INSTALLED_APPS, make sure it's above `django.contrib.admin`:
 
-    `INSTALLED_APPS += ['clearcache']`
+```
+INSTALLED_APPS += [
+    ...
+    'clearcache',
+    'django.contrib.admin',
+    ...
+]
+```
 
 3. Add url to the main **urls.py** right above root admin url:
     ```
     urlpatterns = [
         url(r'^admin/clearcache/', include('clearcache.urls')),
-        url(r'^admin/backups/', include('dbbackup_ui.urls')),
         url(r'^admin/', include(admin.site.urls)),
     ]
     ```
