@@ -1,4 +1,5 @@
-# Django ClearCache
+# Django ClearCache 🤠🧹💰 ![Build status](https://circleci.com/gh/timonweb/django-clearcache.svg?style=shield)
+
 
 Allows you to clear Django cache via admin UI or manage.py command.
 
