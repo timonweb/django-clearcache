@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-clearcache"
-version = "1.0.1"
+version = "1.1.0"
 description = "Allows you to clear Django cache via admin UI or manage.py command"
 authors = ["Tim Kamanin <tim@timonweb.com>"]
 homepage = "https://timonweb.com"
