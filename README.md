@@ -3,7 +3,7 @@
 
 Allows you to clear Django cache via admin UI or manage.py command.
 
-![demo](https://g.recordit.co/qnrHAo66Ny.gif)
+![demo](https://raw.githubusercontent.com/timonweb/django-clearcache/master/demo.gif)
 
 ## Installation
 
