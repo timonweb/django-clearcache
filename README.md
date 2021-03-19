@@ -1,5 +1,9 @@
-# Django ClearCache 🤠🧹💰 ![Build status](https://circleci.com/gh/timonweb/django-clearcache.svg?style=shield)
+# Django ClearCache 🤠🧹💰 
 
+![Build status](https://circleci.com/gh/timonweb/django-clearcache.svg?style=shield)
+![License](https://img.shields.io/pypi/l/django-clearcache)
+![Django versions](https://img.shields.io/pypi/djversions/django-clearcache)
+![Python versions](https://img.shields.io/pypi/pyversions/django-clearcache)
 
 Allows you to clear Django cache via admin UI or manage.py command.
 
