@@ -29,8 +29,8 @@ INSTALLED_APPS += [
 3. Add url to the main **urls.py** right above root admin url:
     ```
     urlpatterns = [
-        url(r'^admin/clearcache/', include('clearcache.urls')),
-        url(r'^admin/', include(admin.site.urls)),
+        path('admin/clearcache/', include('clearcache.urls')),
+        path('admin/', admin.site.urls),
     ]
     ```
 
