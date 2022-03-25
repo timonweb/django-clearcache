@@ -12,7 +12,7 @@ class ClearCacheAdminView(UserPassesTestMixin, FormView):
     form_class = ClearCacheForm
     template_name = "clearcache/admin/clearcache_form.html"
 
-    success_url = reverse_lazy('clearcache_admin')
+    success_url = reverse_lazy("clearcache_admin")
 
     def test_func(self):
         # Only super user can clear caches via admin.
@@ -24,14 +24,20 @@ class ClearCacheAdminView(UserPassesTestMixin, FormView):
 
     def form_valid(self, form):
         try:
-            cache_name = form.cleaned_data['cache_name']
+            cache_name = form.cleaned_data["cache_name"]
             clear_cache(cache_name)
-            messages.success(self.request, f"Successfully cleared '{form.cleaned_data['cache_name']}' cache")
+            messages.success(
+                self.request,
+                f"Successfully cleared '{form.cleaned_data['cache_name']}' cache",
+            )
         except Exception as err:
-            messages.error(self.request, f"Couldn't clear cache, something went wrong. Received error: {err}")
+            messages.error(
+                self.request,
+                f"Couldn't clear cache, something went wrong. Received error: {err}",
+            )
         return HttpResponseRedirect(self.success_url)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Clear cache'
+        context["title"] = "Clear cache"
         return context

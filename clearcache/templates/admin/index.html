@@ -1,18 +1,17 @@
-{% extends 'admin/index.html' %}
-
-{% block sidebar %}
-  {{ block.super }}
-  <div class="app-clear-cache module">
-    <table>
-      <caption>
-        <a href="{% url 'clearcache_admin' %}" class="section" title="Clear cache">Clear cache</a>
-      </caption>
-      <tbody>
+{% extends 'admin/index.html' %} {% block sidebar %} {{ block.super }}
+<div class="app-clear-cache module">
+  <table>
+    <caption>
+      <a href="{% url 'clearcache_admin' %}" class="section" title="Clear cache">Clear cache</a>
+    </caption>
+    <tbody>
       <tr class="model-user">
-        <th scope="row"><a href="{% url 'clearcache_admin' %}">Clear cache</a></th>
+        <th scope="row">
+          <a href="{% url 'clearcache_admin' %}">Clear cache</a>
+        </th>
         <td></td>
       </tr>
-      </tbody>
-    </table>
-  </div>
+    </tbody>
+  </table>
+</div>
 {% endblock %}

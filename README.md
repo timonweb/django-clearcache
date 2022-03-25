@@ -1,4 +1,4 @@
-# Django ClearCache 🤠🧹💰 
+# Django ClearCache 🤠🧹💰
 
 ![License](https://img.shields.io/pypi/l/django-clearcache)
 ![Django versions](https://img.shields.io/pypi/djversions/django-clearcache)
@@ -28,7 +28,7 @@ Allows you to clear Django cache via admin UI or manage.py command.
       ```
 
 3. Add url to the main **urls.py** right above root admin url:
-   
+
        ```
        urlpatterns = [
            path('admin/clearcache/', include('clearcache.urls')),
@@ -57,6 +57,14 @@ Allows you to clear Django cache via admin UI or manage.py command.
       ```
       python manage.py clearcache cache_name
       ```
+
+## Development
+
+There is a set of pre-commit rules that is validated on GH actions, you could install by youselve and rules will be checked too by running.
+
+```
+pre-commit run --all-files
+```
 
 ## Follow me
 
