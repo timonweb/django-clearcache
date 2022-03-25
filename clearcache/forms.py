@@ -9,7 +9,3 @@ def get_cache_choices():
 
 class ClearCacheForm(forms.Form):
     cache_name = forms.ChoiceField(choices=get_cache_choices)
-
-
-class ClearCacheByKeyForm(ClearCacheForm):
-    cache_name = forms.CharField(required=True)
