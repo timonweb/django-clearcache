@@ -1,3 +1,6 @@
+"""
+    Test clearcache with superuser
+"""
 import time
 
 import pytest
@@ -7,11 +10,10 @@ from django.urls import reverse
 
 CACHE_KEY = 'example_cache_key'
 CACHE_VALUE = 'example_cache_value'
+CACHE_EXPIRE_IN_SEC = 1
 
 
 def test_cache_works():
-    CACHE_EXPIRE_IN_SEC = 1
-
     assert cache.get(CACHE_KEY) is None, "The value isn't cached yet"
 
     cache.set(CACHE_KEY, CACHE_VALUE, CACHE_EXPIRE_IN_SEC)

@@ -36,13 +36,27 @@ Allows you to clear Django cache via admin UI or manage.py command.
        ]
        ```
 
+4. Apply migrations:
+
+   ```
+   manage.py migrate [--database=<your_database>] [--settings=<your_settings>]
+   ```
+
 ## Usage
 
 ### Via Django admin
 
-1. Go to `/admin/clearcache/`, you should see a form with cache selector
+Clearcache can be used by any user with permission ```clearcache.use_clearcache```, 
+and obviously be any superuser (superusers have all permissions).
+
+1. Go to `/admin/clearcache/`. If you are authorized, you should see a form with cache selector.
 2. Pick a cache. Usually there's one default cache, but can be more.
 3. Click the button, you're done!
+
+Any user with access to the Admin interface (i.e. any user with `is_staff` privilege) 
+will see a Clearcache section on the Admin homepage, if he is authorized, and can 
+access Clearcache from there. 
+
 
 ### Via manage.py command
 
@@ -60,5 +74,5 @@ Allows you to clear Django cache via admin UI or manage.py command.
 
 ## Follow me
 
-1. Check my dev blog with Python and JavaScript tutorials at [https://timonweb.com](https://timonweb.com)
-2. Follow me on twitter [@timonweb](https://twitter.com/timonweb)
+1. Check my dev blog with Python and JavaScript tutorials at [https://timonweb.com](https://timonweb.com).
+2. Follow me on Twitter [@timonweb](https://twitter.com/timonweb)
